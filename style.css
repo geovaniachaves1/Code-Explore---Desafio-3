@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+  --cor-primaria: #ffffff;
+  --cor-secundaria: #1A99E6;
+  --cor-complementar: #D81A86;
+  --cor-complementar2: #F06254;
+  --cor-complementar3: #FDCD7B;
+}
+
+
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(./img/bg-new-scaled.jpg);
+  background-size: cover;
+  background-position: fixed;
+  background-repeat: no-repeat;
+
+
+}
+
+header {
+  padding: 5px 0 5px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+header nav {
+  height: 10vh;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+header a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+  position: relative;
+  font-weight: 800;
+  padding-right: 20px;
+  font-size: 1rem;
+}
+
+header a::after {
+  content: '';
+  width: 0px;
+  height: 4px;
+  background-image: linear-gradient(45deg, #D81A86, #FDCD7B);
+  position: absolute;
+  bottom: -5px;
+  top: 30px;
+  left: 0;
+  transition: width 0.5s;
+}
+
+header a:hover::after {
+  width: 50px;
+}
+
+header a:hover {
+  color: var(--cor-secundaria);
+}
+
+header a.active {
+  color: var(--cor-secundaria);
+}
+
+.logo {
+  margin: 10px;
+}
+
+.logo i {
+  height: 30px;
+  width: 30px;
+  font-size: 2rem;
+}
+
+.logo i {
+  height: 40px;
+  width: 40px;
+  background: linear-gradient(45deg, #FDCD7B, #F06254);
+  box-shadow: 0 0 10px rgba(255, 246, 250, 0.719);
+  border-radius: 50%;
+  color: var(--cor-primaria);
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.logo .logo-text {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--cor-primaria);
+  margin-left: 10px;
+}
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container {
+  max-width: 450px;
+  margin: 15px auto;
+  padding: 2%;
+  background-color: #ffffffc0;
+  box-shadow: 0 0 20px rgba(253, 205, 123, 0.50);
+  border-radius: 32px;
+  border-top: 2px solid #ffffff75;
+  border-left: 2px solid #ffffff75;
+  border-radius: 32px;
+  overflow: hidden;
+  backdrop-filter: blur(4px);
+}
+
+h1 {
+  text-align: center;
+  color: var(--cor-complementar);
+  font-size: 2.1rem;
+  margin-top: 0.2rem;
+}
+
+
+p {
+  color: var(--cor-complementar2);
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+label {
+  margin: 10px 10px 10px;
+  font-size: 1rem;
+  color: var(--cor-complementar);
+  padding: 5px;
+
+}
+
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccccccca;
+  border-radius: 16px;
+  box-sizing: border-box;
+  outline: none;
+
+}
+
+select option {
+  font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  font-size: 16px;
+}
+
+.error-message {
+  color: #d81a1a;
+  font-size: 1rem;
+}
+
+.checkbox {
+  margin: 5px 0;
+}
+
+button[type="submit"] {
+  background: linear-gradient(45deg, #D81A86, #FDCD7B);
+  color: var(--cor-primaria);
+  font-size: 1rem;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: 0.4s;
+  padding: 10px 10px;
+  margin-bottom: 10px;
+}
+
+button[type="submit"]:hover {
+  background: var(--cor-secundaria);
+}
+
+/* Estilo para inputs com erro */
+.form-control.error input,
+.form-control.error textarea {
+  border-color: #d81a1a;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 50px;
+  align-items: center;
+  border-top: 2px solid var(--cor-complementar3);
+  font-size: 1em;
+}
+
+.copyright {
+  color: var(--cor-secundaria);
+  margin: 5px 0 0;
+  font-size: 16px;
+  font-weight: 900;
+}
