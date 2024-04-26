@@ -78,7 +78,7 @@ function validateInputs() {
   isValid = false;
 } 
   if(!radioEmail.checked  && !radioTel.checked && !radioWhats.checked) { 
-    alert("Selecione o tipo de contato!"); 
+    alert(" mensagem não pode ficar em branco,Selecione o tipo de contato!"); 
     isValid = false;
     } 
  
